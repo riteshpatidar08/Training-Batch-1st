@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* to reset the :default margin and padding applied by your browser */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* this style will apply all across your html file */
+      html {
+        color: white;
+        background-color: #000000;
+      }
+
+      /*common styling for all h1 elements */
+
+      h1 {
+        font-size: 50px;
+        color: #792dc3;
+        margin-left: 40vw;
+      }
+
+      /*styling properties for each section*/
+
+      #pseudo-classes,
+      #position,
+      #display,
+      #text {
+        height: 120vh;
+
+        padding: 10px;
+      }
+
+      a {
+        font-size: 50px;
+        margin-left: 30px;
+      }
+
+      /* Pseudo Classes  */
+
+      a:hover {
+        color: yellow;
+        font-size: 70px;
+      }
+
+      a:active {
+        color: lightgreen;
+      }
+
+      a:link {
+        color: red;
+      }
+
+      .outer-container {
+        width: 70vw;
+        height: 90vh;
+        margin: 30px auto;
+        border: 2px dashed lightsalmon;
+      }
+
+      .inner-container {
+        width: 50vw;
+        height: 60vh;
+        margin: 150px auto;
+        border: 2px solid lightgreen;
+        position: relative;
+      }
+
+      .box {
+        color: black;
+        height: 150px;
+        width: 150px;
+        padding: 20px;
+        font-size: 20px;
+      }
+
+      .relative {
+        position: relative;
+        background-color: red;
+        /* bottom : 100px ;
+         right: 40px; */
+      }
+
+      .absolute {
+        background-color: lightpink;
+        position: absolute;
+        top: 0;
+        z-index: 10;
+      }
+
+      .fixed {
+        background-color: yellow;
+        /* position: fixed; -->
+         top:0; */
+      }
+
+      p {
+        font-size: 30px;
+        word-spacing: 10px;
+        letter-spacing: 20px;
+        text-indent: 40px;
+        text-transform: uppercase;
+        text-decoration: underline;
+        text-align: justify;
+      }
+
+      h2 {
+        display: inline-block;
+        height: 150px;
+        border: 2px solid rgb(193, 43, 43);
+        margin: 10px;
+      }
+
+      .container {
+        background-color: rgb(227, 177, 177);
+        margin: 20px;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 500px;
+      }
+
+      .item {
+        padding: 30px;
+        background-color: green;
+        margin: 10px;
+        height: 200px;
+      }
+
+      .item3 {
+        order: -1;
+        flex-shrink: 1;
+      }
+
+      .item1 {
+        flex-grow: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <section id="pseudo-classes">
+      <h1>Pseudo Classes</h1>
+      <a href="https://www.google.com" target="_blank">Clickme</a>
+    </section>
+    <section id="position">
+      <h1>Position Property</h1>
+      <div class="outer-container">
+        <div class="inner-container">
+          <div class="box absolute">Absolute</div>
+          <div class="box relative">Relative</div>
+          <div class="box fixed">fixed</div>
+          <!-- <div class="box4"></div> -->
+        </div>
+      </div>
+    </section>
+    <section id="display">
+      <h1>Display Properties</h1>
+      <h2>Hello World !</h2>
+      <h2>Hello World !</h2>
+      <!-- flex -->
+
+      <div class="container">
+        <div class="item item1">item 1</div>
+        <div class="item item2">item 2</div>
+        <div class="item item3">item 3</div>
+        <div class="item item4">item 4</div>
+        <div class="item item5">item 5</div>
+      </div>
+    </section>
+    <section id="text">
+      <h1 id="heading">Text Properties</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. A aut
+        laboriosam facere nostrum. Ipsam maxime quod optio. Ea natus aperiam
+        necessitatibus officiis sit ipsum architecto tenetur recusandae,
+        provident praesentium dignissimos?
+      </p>
+      <button id="button">Click me</button>
+    </section>
+    <!-- <script>
+
+      
+    let element = document.getElementById('heading')
+    console.log(element)
+    element.innerHTML = "hello"
+    
+    let button = document.getElementById('button')
+    button.addEventListener('click' , ()=> {
+      element.innerHTML = "button is clicked"
+    })
+
+
+    </script> -->
+  </body>
+</html>
