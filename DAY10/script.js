@@ -561,8 +561,11 @@ console.warn('This is a warning message.');
 function sum(a, b) {
   return a + b;
 }
+
 //arrow function single line
 const sum1 = (a, b) => a + b;
+
+
 //arrow function multi line ;
 const fullName = (firstName, lastName) => {
   return `my name is ${firstName} ${lastName}`;
@@ -651,19 +654,19 @@ fruit3.includes('apple');
 //objects are generally start with {} curly brackets and have "KEY : VALUE" pair similar like dictonary in the python
 
 const booking = {
-  trainNo: 12433,
-  passengerCount: 3,
-  passengerNames: ['a', 'b', 'c'],
-};
+  trainName : 'xyz' ,
+  trainNo : 12334 ,
+  passengerNames : ['a', 'b' , 'c']
+}
 // tO ACCESS THE OBJECT ITEMS WE CAN USE TWO METHODS -
-// 1. DOT NOTATION
-console.log(booking.trainNo);
+//dot notation 
+console.log(booking.trainName)
+//bracket notation 
+console.log(booking['trainNo'])
 // to access the array item in the object
 console.log(booking.passengerNames[0]);
 //To update the value
-booking.passengerCount = 4;
-booking.trainNo = 13445;
-console.log(booking);
+
 
 const details = {
   firstName: 'abc',
