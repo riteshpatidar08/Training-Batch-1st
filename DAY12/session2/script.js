@@ -23,7 +23,7 @@
 // console.log(value);
 
 // //NOTE -  OBJECTS properties
-// //object.keys
+//object.keys
 // const booking = {
 //   trainNo: 12345,
 //   passengerCount: 3,
@@ -37,12 +37,12 @@
 // });
 // // console.log(keys) ;
 
-// //object.values
+//object.values
 
 // const values = Object.values(booking);
 // // console.log(values) ;
 
-// //object.assign
+//object.assign
 // //to add two objects
 // const booking2 = {
 //   departureDate: '12-05-2024',
@@ -110,52 +110,95 @@
 // const NumberArray = [1, 2, 3, 4, 4, 5];
 // console.log(NumberArray.lastIndexOf(4));
 
-//-----------------------02/04/2024-----------------------
 
-//Data transformation
+
+//-----------------------02/04/2024-----------------------
+// //normal function
+// function sum(a,b){
+//   return a + b ;
+// }
+// // arrow function
+// const sum = (a,b) => {
+//   return a + b ;
+// }
+//Data transformation Method of Arrays
 
 //NOTE MAP METHOD FOR ARRAY
+const numArr = [1,2,3,4,5,6] ;
+const mappedArr = numArr.map((element)=> element * 2)
+console.log(numArr)
+console.log(mappedArr)
 
 //NOTE perform the transform operation in the callback and returns new array
 
 //NOTE most important method in the array
 
+// Filter method
+
+// const companies = ['apple' , 'apple' , 'microsoft', 'meta', 'google', 'google' ,] ;
+
+// const filteredCompanies = companies.filter((element) => element === 'google')
+// console.log(companies) ;
+// console.log(filteredCompanies) ;
+
+//find method same as filter but return only one element that matching the condition 
+
+const numberArray = [1,2,3,4,4,5,6] ;
+const findArray = numberArray.find((a)=> a === 4) ;
+console.log(findArray) ;
+
+//reduce 
+// const numberArray = [1,2,3,4,5,6,7] ;
+// const reducedArray = numberArray.reduce((accumulator , currentItem)=> {
+//   console.log(accumulator , currentItem)
+//   return accumulator + currentItem ;
+// },0)
+
+//
 
 
+const companies = ['apple' , 'apple' , 'microsoft', 'meta', 'google', 'google' ,] ;
 
-// //filter
-// const filteredArray = companies.filter((e) => e === 'ibm');
-// console.table('filteredarray', filteredArray);
-// console.log('companies', companies);
-// //reduce
-// const num2 = [1, 2, 4, 7, 4, 8];
-// const reduceArray = num2.reduce((accumulator, currentIndex) => {
-//   console.log(accumulator, currentIndex);
-//   return accumulator + currentIndex;
-// }, 0);
-// console.log(reduceArray);
+//some
+const someArray = companies.some((e) => e === 'tcs');
+console.log(someArray);
 
-// //find
-// const findArray = companies.find((e) => e === 'ibm');
-// console.table(findArray);
-// console.log('companies', companies);
-// //some
-// const someArray = companies.some((e) => e === 'ibm');
-// console.log(someArray);
-// //sort
+//sort
 // //modify original array
-// const descendingOrder = num2.sort((a, b) => b - a);
-// console.log(descendingOrder);
-// const ascendingOrder = num2.sort();
-// console.log(ascendingOrder);
+const newNumArray = [7,2,8,4,5,1,3,6] ;
+const sortedArray = newNumArray.sort() ;
+console.log(sortedArray) ;
+
+// ascending order 
+//descending order
+const descendingOrder = newNumArray.sort((a,b)=> b-a) ;
+console.log(descendingOrder)
+
 // // console.log(num2) ;
 
-//forEach
+//forEach method
+//to loop over array ;
+const fruits = ['mango' , 'apple' , 'grapes' ,'pomengranate'] ;
+
+fruits.forEach((item)=>{
+  console.log(item)
+})
+
+
 
 // //Task
 
-// // Create an object of a user with properties like firstName, lastName, and age. Add a method called formatInfo() that formats and returns the user's information as a string, such as "Ram, is 27 years old".
+// Create an object of a user with properties like firstName, lastName, and age. Add a method called formatInfo() that formats and returns the user's information as a string, such as "Ram, is 27 years old".
+const myDetails  = {
+  firstName : 'Ram' ,
+  lastName : '' ,
+  age : 27 ,
+  formatInfo : function(){
+    return `${this.firstName} , is ${this.age} years old `
+  }
+}
 
+console.log(myDetails.formatInfo()) ;
 // // TODO - Array Destructuring Tasks
 // // Task: Swap Variables
 // // Swap the values of two variables using array destructuring.

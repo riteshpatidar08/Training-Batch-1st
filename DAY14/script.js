@@ -1,38 +1,59 @@
-let str = 'Hello, world!';
+//STRING METHOD
+// NOTE Methods for extracting parts of a string
+1; // charAt method
+//return the character available on the given index position
 
-//NOTE Methods for extracting parts of a string
-//1 charAt
-// console.log('char at method:', str.charAt(2));
-// console.log(str.length);
+// const strCharAt = str.charAt(1) ;
+// console.log(strCharAt) ;
 
 //2 slice
-// console.log(str.slice(1, 4));
+// slice(startIndex , endIndex) ;
+// // you always get elements = endIndex - startindex
+// const slicedString = str.slice(1,3) ;
+// console.log(slicedString)
 
 //NOTE Methods for searching for a substring
-// console.log(str.indexOf('l'));
-// console.log(str.lastIndexOf('l'));
+// console.log(str.indexOf('e'));
 // console.log(str.includes('by'));
 
-// console.log(str.startsWith('Hello'));
-// console.log(str.endsWith('world!'));
+// let str = 'Hello, world!';
+
+// //startsWith
+// // check if our string start with the following word
+// const startWithString = str.startsWith('no');
+// console.log(startWithString);
+
+// //endswith
+// //check if our string ends with the following word
+// const endsWithString = str.endsWith('world!');
+// console.log(endsWithString);
 
 //NOTE Methods for modifying a string
+// let str = 'Hello world!'
+// let replacedString = str.replace('world' , 'friend')
+// console.log(replacedString)
 
-// console.log(str.replace('world', 'friend'));
-// console.log(str) ;
-// console.log(str.toLowerCase());
-// console.log(str.toUpperCase());
+// console.log( 'lowercase' , str.toLowerCase());
+// console.log('uppercase' ,str.toUpperCase());
 
-// console.log(str.concat(' Goodbye!'));
+// console.log('add a word to string',str.concat(' Goodbye!'));
 
 // //NOTE Methods for trimming whitespaces
-// console.log('  hello, world!    '.trim());
+// let newStr = '    hello world!   '
+// console.log(newStr)
+// let newTrimmedString = newStr.trim() ;
+// console.log('trimmedString' ,
+// newTrimmedString)
 
-// //NOTE other methods
-// console.log(str.split(','));
-// console.log(str.repeat(2));
+//split method converts string into array
 
-// console.log(str.split('').reverse().join(''));
+// const str = 'Hello world!'
+
+//to reverse a string in the javascript
+// const splittedArray = str.split('');
+// console.log(splittedArray)
+// console.log(splittedArray.reverse().join(''))
+//join method convert the array in to string
 
 //Number methods
 
@@ -41,22 +62,11 @@ let str = 'Hello, world!';
 // const roundedNumber1 = number1.toFixed(2);
 // console.log(roundedNumber1);
 
-//NOTE  Method 2: toPrecision()
-// const number2 = 12345.6;
-// const formattedNumber = number2.toPrecision(10);
-// console.log(formattedNumber);
-
 // //NOTE Method 3: toLocaleString()
 // const number3 = 1234567.89;
 // const localeString = number3.toLocaleString('en-US');
 // console.log(localeString);
 
-// //NOTE Method 4: Number.isNaN()
-// console.log(typeof(NaN))
-// console.log(Number.isNaN(value1));
-
-// console.log(Number.isNaN(value2));
-// is not a number
 // //NOTE Method 5: Number.parseInt()
 // const stringNumber1 = '123';
 // const parsedInt = Number.parseInt(stringNumber1);
@@ -67,23 +77,16 @@ let str = 'Hello, world!';
 // const parsedFloat = Number.parseFloat(stringNumber2);
 // console.log(parsedFloat);
 
-// //NOTE Method 7: Number.MAX_SAFE_INTEGER
-// console.log(Number.MAX_SAFE_INTEGER);
-
-// //NOTE Method 8: Number.MIN_SAFE_INTEGER
-// console.log(Number.MIN_SAFE_INTEGER);
-
 // Date Object Methods
 
-// Method 1: new Date()
+// Method 1: new Date() ;
+// to print current time and date in the js
 const currentDate = new Date();
 console.log(currentDate);
 
-// Method 2: getDate()
-const date = currentDate.getDate();
-console.log('Date:', date);
+const getDatee = currentDate.getDate();
+console.log(getDatee);
 
-// Method 3: getMonth()
 const month = currentDate.getMonth();
 console.log('Month:', month);
 
@@ -116,10 +119,10 @@ const localeTimeString = currentDate.toLocaleTimeString();
 console.log('Locale Time String:', localeTimeString);
 
 // Math Object Methods
-
-//NOTE Method 1: Math.abs()
-const absoluteValue = Math.abs(-4.25);
-console.log('Absolute Value:', absoluteValue);
+//NOTE Method
+// 1: Math.abs()
+const absoluteValue = Math.abs(-8.45);
+console.log(absoluteValue);
 
 // //NOTE Method 2: Math.round()
 const roundedNumber = Math.round(4.2);
@@ -137,25 +140,26 @@ console.log('Ceiling Value:', ceilValue);
 const randomNumber = Math.random();
 console.log('Random Number:', randomNumber);
 
-// //NOTE Method 6: Math.max()
-const maxNumber = Math.max(10, 20, 30);
+//NOTE Method 6: Math.max()
+const arr = [1,2,3,4,5,6,7,8,9]
+const maxNumber = Math.max(...arr);
 console.log('Max Number:', maxNumber);
 
 // //NOTE Method 7: Math.min()
-const minNumber = Math.min(10, 20, 30);
+const minNumber = Math.min(...arr);
 console.log('Min Number:', minNumber);
 
 //NOTE Method 8: Math.pow()
-const powerResult = Math.pow(2, 3);
-console.log('Power Result:', powerResult);
+// const powerResult = Math.pow(2, 3);
+// console.log('Power Result:', powerResult);
 
 // //NOTE Method 9: Math.sqrt()
-const sqrtResult = Math.sqrt(25);
-console.log('Square Root Result:', sqrtResult);
+// const sqrtResult = Math.sqrt(25);
+// console.log('Square Root Result:', sqrtResult);
 
 //PI
-const piValue = Math.PI;
-console.log(piValue);
+// const piValue = Math.PI;
+// console.log(piValue);
 
 console.log('Start');
 
