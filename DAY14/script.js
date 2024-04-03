@@ -145,7 +145,7 @@ const arr = [1,2,3,4,5,6,7,8,9]
 const maxNumber = Math.max(...arr);
 console.log('Max Number:', maxNumber);
 
-// //NOTE Method 7: Math.min()
+//NOTE Method 7: Math.min()
 const minNumber = Math.min(...arr);
 console.log('Min Number:', minNumber);
 
