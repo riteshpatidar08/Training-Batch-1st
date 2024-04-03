@@ -71,8 +71,13 @@
 //     para.style.color = "blue"
 //     para.style.fontSize = "40px"
 // })
+
 document.getElementById('form').addEventListener('submit', () => {
+  //submit event will fire when the form is submitted by user
+  //event.preventDefault prevent the default submit behaviour of the form submission
+
   event.preventDefault();
+  //.value is used to get the input from the input field
   const userName = document.getElementById('username').value;
   const password = document.getElementById('password').value;
   console.log(userName, password);
