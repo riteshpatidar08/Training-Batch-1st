@@ -80,5 +80,5 @@ document.getElementById('form').addEventListener('submit', () => {
   //.value is used to get the input from the input field
   const userName = document.getElementById('username').value;
   const password = document.getElementById('password').value;
-  console.log(userName, password);
+  console.log('userName' , userName, 'password', password);
 });
